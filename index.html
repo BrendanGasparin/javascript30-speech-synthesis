@@ -70,6 +70,8 @@
   speechSynthesis.addEventListener('voiceschanged', populateVoices);  // populate the voices dropdown
   voicesDropdown.addEventListener('change', setVoice);                // set voice on dropdown change
   options.forEach(option => option.addEventListener('change', setOption));  // listen to change on rate, pitch, and textarea
+  speakButton.addEventListener('click', toggle);
+  stopButton.addEventListener('click', toggle.bind(null, false));     // null means this function? false is the first (and only) argument
 </script>
 
 </body>
